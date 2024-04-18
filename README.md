@@ -8,13 +8,13 @@
 
 ​	首先进入Gaia文档，链接：https://gea.esac.esa.int/archive/ 。
 
-<img src="F:\typora\Typora\img\image-20240418182421210.png" alt="image-20240418182421210" style="zoom: 67%;" />
+  ![image](img/img1.png)
 
 ​	点击右上角sign in先进行注册，为了后续可以上传星表。
 
 ​	然后点击search，切换到Advanced(ADQL语言)，界面如下图所示：
 
-<img src="F:\typora\Typora\img\image-20240418182542343.png" alt="image-20240418182542343" style="zoom:67%;" />
+  ![image](img/img2.png)
 
 ​	左边的就是Gaia全部的数据，点击加号之后可以看到不同的表，再点击就会出现每个数据有哪些列，点击名称可以查看不同表的描述，并且可以选择展示前20行数据来进行参考。右边的空白地方就是写查询命令的地方，空白处右上角的**Query samples**里面有很多例子。空白处下方是查询结果。
 
@@ -24,7 +24,7 @@
 
 注：请注意，上传csv文件的时候，**Gaia不支持大写英文的文件名**
 
-![image-20240418183103371](F:\typora\Typora\img\image-20240418183103371.png)
+  ![image](img/img3.png)
 
 ​	注意：除了星表中的光谱id，上传的星表中需要包含两个重要的属性列：**ra**和**dec**，ra和dec是用来描述天体位置的坐标系统，其中：
 
@@ -34,7 +34,7 @@
 
 在上传星表后，勾选表前的空白格，并点击第四个图表来编辑表
 
-<img src="F:\typora\Typora\img\image-20240418183900318.png" alt="image-20240418183900318" style="zoom: 50%;" />
+  ![image](img/img4.png)
 
 请确认表中的ra和dec，并在其右侧flag下拉框中对应选择"Ra"和"Dec"，之后点击Update更新。
 
@@ -44,7 +44,7 @@
 
 ​	(e.g:限定范围三角秒匹配)
 
-<img src="F:\typora\Typora\img\image-20240418183136208.png" alt="image-20240418183136208" style="zoom:67%;" />
+  ![image](img/img5.png)
 
 ### 3.利用Gaiadr3、用户表和交叉匹配表进行查询
 
@@ -60,7 +60,7 @@ select id_gaia from gaiadr3.gaia_source as gaia, your_spectrum_table as user_tab
 
 然后请点击查询结果右侧第二个图表来上传中间表
 
-![image-20240418191103842](F:\typora\Typora\img\image-20240418191103842.png)
+  ![image](img/img7.png)
 
 接着执行去重代码：
 
@@ -74,7 +74,7 @@ select gl.id_gaia from your_update_table as gl,gaiadr3.gaia_source as gaia where
 
 ### 4.下载结果表
 
-<img src="F:\typora\Typora\img\image-20240418184719615.png" alt="image-20240418184719615" style="zoom: 80%;" />
+  ![image](img/img6.png)
 
 点击查询结果行右侧第三个图标进行下载即可
 
