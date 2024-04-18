@@ -100,7 +100,7 @@ if __name__ == '__main__':
     # path
     gaiaID_csv_path = "your_gaiaID_csv_path"
     save_Spectrum_Path = "your_spectrum_save_path"
-    # get id and label
+    # get id 
     id_list = get_data_from_csv(gaiaID_csv_path)
     print(f"{len(id_list)} files are going to be downloaded ")
     # parameter
